@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Github Issues Tracker</title>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+</head>
+
+<body class="min-h-screen bg-gray-200">
+
+<!-- HEADER -->
+<section class="container mx-auto">
+
+<div class="flex flex-col md:flex-row justify-between items-center border-b py-5 px-4 gap-4">
+
+<div class="flex items-center gap-3">
+
+<img src="./assets/github-logo.png" class="w-14">
+
+<h1 class="text-2xl font-bold">
+GitHub Issues Tracker
+</h1>
+
+</div>
+
+<div class="flex flex-col md:flex-row gap-3">
+
+<input id="input"
+class="rounded-lg py-2 px-3 border"
+type="text"
+placeholder="Search issues">
+
+<button id="search-btn" class="btn btn-primary rounded-xl">
++ New Issue
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FILTER BUTTON -->
+<section class="container mx-auto mt-8">
+
+<div class="bg-gray-300 rounded-xl w-full md:w-[350px] mx-auto">
+
+<div class="flex justify-center gap-6 py-4">
+
+<button id="allTab"
+onclick="filterIssues('all')"
+class="btn btn-soft btn-primary">
+All
+</button>
+
+<button id="openTab"
+onclick="filterIssues('open')"
+class="btn btn-soft btn-primary">
+Open
+</button>
+
+<button id="closeTab"
+onclick="filterIssues('closed')"
+class="btn btn-soft btn-primary">
+Close
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ISSUE COUNT CARD -->
+<section class="container mx-auto mt-8">
+
+<div class="bg-white p-6 rounded-xl shadow flex flex-col md:flex-row justify-between items-center gap-5">
+
+<div class="flex items-center gap-3">
+
+<img src="./assets/Aperture.png" class="w-8">
+
+<div>
+
+<h2 class="font-bold text-xl">
+<span id="all-count">50</span> Issues
+</h2>
+
+<p class="text-gray-500">
+Track and manage your project issues
+</p>
+
+</div>
+
+</div>
+
+
+<div class="flex items-center gap-6">
+
+<span class="flex items-center gap-2 text-gray-600 font-medium">
+
+<img src="./assets/Open-Status.png" class="w-5">
+
+Open
+
+</span>
+
+
+<span class="flex items-center gap-2 text-gray-600 font-medium">
+
+<img src="./assets/Closed- Status .png" class="w-5">
+
+Close
+
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ISSUES GRID -->
+<section
+id="issue-container"
+class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
+>
+
+</section>
+
+
+<!-- MODAL -->
+<section id="modal-container">
+
+</section>
+
+
+<script src="./home.js"></script>
+
+</body>
+</html>
